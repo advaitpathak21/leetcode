@@ -6,11 +6,10 @@ class Solution:
         r = 1
         
         while (r < n):
-            if (prices[l] > prices[r]):
+            if (prices[l] >= prices[r]):
                 l = r
-                r += 1
-            elif (prices[l] <= prices[r]):
-                if (result < prices[r] - prices[l]):
-                    result =A prices[r] - prices[l]
-                r += 1
+            elif (prices[l] < prices[r]):
+                profit = prices[r] - prices[l]
+                result = max(result, profit)
+            r += 1
         return result
