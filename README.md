@@ -1,2 +1,2 @@
 # leetcode
-solving challenges daily
+solving challenges
