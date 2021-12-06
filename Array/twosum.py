@@ -14,9 +14,8 @@ class Solution:
         hamap = {}
         
         for i, n in enumerate(nums):
-            print(i,n)
-            k = target - n
-            if k in hamap:
-                return hamap[k], i
+            need = target - n
+            if need in hamap:
+                return hamap[need], i
             hamap[n] = i
         return
